@@ -6,6 +6,10 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List files
+        run: |
+          pwd
+          ls -als
       - name: Simple JS action
         id: greet
       # Reference to an action. Here we can use an already published Github-Action or a local one.
