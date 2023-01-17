@@ -11,6 +11,9 @@ jobs:
 
       - name: Multiple scripts
         run: |
+          echo "[INFO] Printing Node version"
           node -v
+          "[INFO] Printing Python version"
           python -v
+          "[INFO] Printing NPM version"
           npm -v
