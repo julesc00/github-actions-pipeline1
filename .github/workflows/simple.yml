@@ -14,6 +14,6 @@ jobs:
           echo "[INFO] Printing Node version"
           node -v
           "[INFO] Printing Python version"
-          python -v
+          python --version
           "[INFO] Printing NPM version"
           npm -v
