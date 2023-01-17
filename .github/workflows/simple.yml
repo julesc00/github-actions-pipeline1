@@ -17,3 +17,9 @@ jobs:
           python --version
           echo "[INFO] Printing NPM version"
           npm -v
+
+      - name: Python Command
+        run: |
+          import platform
+          print(platform.processor())
+        shell: python
