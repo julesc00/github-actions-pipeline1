@@ -10,6 +10,14 @@ jobs:
         run: |
           pwd
           ls -als
+      # Clone repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: List files after checkout
+        run: |
+          pwd
+          ls -als
       - name: Simple JS action
         id: greet
       # Reference to an action. Here we can use an already published Github-Action or a local one.
