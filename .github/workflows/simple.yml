@@ -13,7 +13,5 @@ jobs:
         run: |
           echo "[INFO] Printing Node version"
           node -v
-          "[INFO] Printing Python version"
-          python --version
           "[INFO] Printing NPM version"
           npm -v
