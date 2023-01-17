@@ -26,6 +26,9 @@ jobs:
 
   run-windows-command:
     runs-on: windows-latest
+
+    # If it depends on a job finishing previously
+    needs: [run-shell-command]
     steps:
       - name: Directory Powershell
         run: pwd
