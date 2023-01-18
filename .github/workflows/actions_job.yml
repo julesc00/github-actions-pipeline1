@@ -10,10 +10,10 @@ jobs:
         run: |
           pwd
           ls -als
-          echo $GITHUB_SHA
-          echo $GITHUB_REPOSITORY
-          echo $GITHUB_WORKSPACE
-          
+          echo "sha: $GITHUB_SHA"
+          echo "Repository name: $GITHUB_REPOSITORY"
+          echo "My workspace: $GITHUB_WORKSPACE"
+
       # Clone repository
       - name: Checkout Repository
         uses: actions/checkout@v3
