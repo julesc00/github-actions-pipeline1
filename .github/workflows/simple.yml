@@ -1,6 +1,15 @@
 name: Shell Commands
 
-on: [push]
+on:
+  repository_dispatch:
+    types: [build]
+  # schedule:
+    # Cron description: min hrs d m dw
+    # * means any value
+    # - cron: "* * * <+"
+  # push:
+  pull_request:
+    types: [closed, assigned, opened, reopened]
 
 jobs:
   run-shell-command:
