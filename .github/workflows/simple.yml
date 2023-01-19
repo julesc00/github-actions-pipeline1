@@ -1,14 +1,32 @@
 name: Shell Commands
 
 on:
-  repository_dispatch:
-    types: [build]
+#  repository_dispatch:
+#    types: [build]
   # schedule:
     # Cron description: min hrs d m dw
     # * means any value
     # - cron: "* * * <+"
   # push:
   pull_request:
+    # Only execute workflow when merging to `main` branch
+    branches:
+      - main
+      # Run workflow when matching `feature/whatever_comes_after except when it has the `/`
+      # But if double asterisk `**` it'll match anything after `feature/`
+      - "feature/*"
+      # Ignore branch example
+      - "!dev"
+      - "!qa"
+    # Filter by tags
+    tags:
+      - v1.*
+    # Filter by path == filename
+    paths:
+      - "**.js"
+      # Ignore such file(s)
+      - "!filename.js"
+
     types: [closed, assigned, opened, reopened]
 
 jobs:
