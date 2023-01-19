@@ -15,6 +15,9 @@ jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
+      # The payload was input in Postman.
+      - name: Retrieve Payload Data
+        run: echo "${{ github.event.client_payload.env }}"
       - name: Echo a string
         run: echo "Hello world!"
 
