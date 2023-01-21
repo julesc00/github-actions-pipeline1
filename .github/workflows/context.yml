@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: dump
         run: |
-          echo ${{ contains( 'hello', 'll' ) }}
+          echo "${{ contains( 'hello', 'll' ) }}"
           
 
   one:
