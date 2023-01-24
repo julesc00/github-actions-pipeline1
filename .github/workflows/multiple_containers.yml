@@ -1,0 +1,11 @@
+name: Multiple Container Example
+on: [pull_request]
+
+jobs:
+  docker-steps:
+    runs-on: ubuntu-latest
+    container:
+      image: node:10.18.0-jessie
+
+  node-docker:
+    runs-on: ubuntu-latest
