@@ -31,11 +31,13 @@ jobs:
           entrypoint: ./script.sh
           args: "Some string"
 
-      - name: Send a slack message
+      - name: Send a slack message notification
+        if: always()
         uses: docker://technosophos/slack-notify
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_MESSAGE: "Hello slackers!"
+          SLACK_MESSAGE: "Hello slackers again!"
+
 
   node-docker:
     runs-on: ubuntu-latest
