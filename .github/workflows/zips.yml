@@ -10,3 +10,4 @@ jobs:
         run: |
           zip my_zip1.zip random.txt random.zip
           test -f my_zip1.zip && echo "the zip was created"
+          ls -als
