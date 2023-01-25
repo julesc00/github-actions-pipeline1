@@ -1,0 +1,12 @@
+name: Zip creation
+on: push
+
+jobs:
+  Create-zips:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Prepare zips
+        run: |
+          zip my_zip1.zip random.txt random.zip
+          test -f my_zip1.zip && echo "the zip was created"
